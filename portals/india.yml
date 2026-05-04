@@ -1,0 +1,1243 @@
+# portals/india.yml — Indian companies with ATS endpoints
+# ─────────────────────────────────────────────────────────────────────────────
+# 150+ Indian companies across Greenhouse, Lever, and Ashby.
+# To find a company's ATS slug: check their careers URL
+#   boards.greenhouse.io/SLUG  → greenhouse
+#   jobs.lever.co/SLUG         → lever  
+#   jobs.ashbyhq.com/SLUG      → ashby
+#
+# To add a company: 4 lines, verify slug returns JSON, open a PR.
+# Slug verification: https://boards-api.greenhouse.io/v1/boards/SLUG/jobs
+# ─────────────────────────────────────────────────────────────────────────────
+
+greenhouse:
+
+  # ── Fintech ────────────────────────────────────────────────────────────────
+  - name: Razorpay
+    slug: razorpay
+    tier: "1"
+    domain: fintech
+    hq: Bangalore
+
+  - name: BharatPe
+    slug: bharatpe
+    tier: "1"
+    domain: fintech
+    hq: Delhi
+
+  - name: Perfios
+    slug: perfios
+    tier: "2"
+    domain: fintech/data
+    hq: Bangalore
+
+  - name: Setu
+    slug: setu
+    tier: "2"
+    domain: fintech infra
+    hq: Bangalore
+
+  - name: Juspay
+    slug: juspay
+    tier: "2"
+    domain: fintech
+    hq: Bangalore
+
+  - name: Niyo
+    slug: niyo
+    tier: "2"
+    domain: neobank
+    hq: Bangalore
+
+  - name: Cashfree
+    slug: cashfree
+    tier: "2"
+    domain: fintech/payments
+    hq: Bangalore
+
+  - name: Happay
+    slug: happay
+    tier: "2"
+    domain: fintech/expense
+    hq: Bangalore
+
+  - name: Open Financial
+    slug: open-financial
+    tier: "2"
+    domain: neobank/B2B
+    hq: Bangalore
+
+  - name: Cred Avenue
+    slug: credavenue
+    tier: "2"
+    domain: fintech/debt
+    hq: Chennai
+
+  # ── SaaS / Dev Tools ───────────────────────────────────────────────────────
+  - name: BrowserStack
+    slug: browserstack
+    tier: "1"
+    domain: devtools
+    hq: Mumbai
+
+  - name: Postman
+    slug: postman
+    tier: "1"
+    domain: devtools
+    hq: Bangalore
+
+  - name: Freshworks
+    slug: freshworks
+    tier: "1"
+    domain: SaaS/CRM
+    hq: Chennai
+
+  - name: Chargebee
+    slug: chargebee
+    tier: "2"
+    domain: SaaS/billing
+    hq: Chennai
+
+  - name: Whatfix
+    slug: whatfix
+    tier: "2"
+    domain: SaaS/DAP
+    hq: Bangalore
+
+  - name: Darwinbox
+    slug: darwinbox
+    tier: "2"
+    domain: HR tech
+    hq: Hyderabad
+
+  - name: Sprinklr
+    slug: sprinklr
+    tier: "2"
+    domain: marketing tech
+    hq: Gurgaon
+
+  - name: Druva
+    slug: druva
+    tier: "2"
+    domain: cloud/data
+    hq: Pune
+
+  - name: Exotel
+    slug: exotel
+    tier: "2"
+    domain: communication SaaS
+    hq: Bangalore
+
+  - name: Clevertap
+    slug: clevertap
+    tier: "2"
+    domain: analytics SaaS
+    hq: Mumbai
+
+  - name: MoEngage
+    slug: moengage
+    tier: "2"
+    domain: marketing tech
+    hq: Bangalore
+
+  - name: WebEngage
+    slug: webengage
+    tier: "2"
+    domain: marketing tech
+    hq: Mumbai
+
+  - name: Netcore Cloud
+    slug: netcorecloud
+    tier: "2"
+    domain: marketing tech
+    hq: Mumbai
+
+  - name: Helpshift
+    slug: helpshift
+    tier: "2"
+    domain: customer support SaaS
+    hq: Mumbai
+
+  - name: Kapture CRM
+    slug: kapture
+    tier: "2"
+    domain: CRM/SaaS
+    hq: Bangalore
+
+  - name: LeadSquared
+    slug: leadsquared
+    tier: "2"
+    domain: CRM/SaaS
+    hq: Bangalore
+
+  - name: Salesken
+    slug: salesken
+    tier: "2"
+    domain: sales intelligence
+    hq: Bangalore
+
+  - name: Uniphore
+    slug: uniphore
+    tier: "2"
+    domain: conversational AI
+    hq: Chennai
+
+  # ── Edtech ─────────────────────────────────────────────────────────────────
+  - name: Unacademy
+    slug: unacademy
+    tier: "2"
+    domain: edtech
+    hq: Bangalore
+
+  - name: upGrad
+    slug: upgrad
+    tier: "2"
+    domain: edtech
+    hq: Mumbai
+
+  - name: Simplilearn
+    slug: simplilearn
+    tier: "2"
+    domain: edtech
+    hq: Bangalore
+
+  - name: Scaler
+    slug: scaler
+    tier: "2"
+    domain: edtech/tech
+    hq: Bangalore
+
+  - name: Great Learning
+    slug: greatlearning
+    tier: "2"
+    domain: edtech
+    hq: Gurgaon
+
+  # ── Health Tech ────────────────────────────────────────────────────────────
+  - name: Innovaccer
+    slug: innovaccer
+    tier: "2"
+    domain: health tech
+    hq: Noida
+
+  - name: Niramai
+    slug: niramai
+    tier: "2"
+    domain: health tech/AI
+    hq: Bangalore
+
+  - name: Portea Medical
+    slug: portea
+    tier: "2"
+    domain: home healthcare
+    hq: Bangalore
+
+  - name: Practo
+    slug: practo
+    tier: "2"
+    domain: health tech
+    hq: Bangalore
+
+  - name: Healthplix
+    slug: healthplix
+    tier: "2"
+    domain: health tech/SaaS
+    hq: Bangalore
+
+  # ── eCommerce / D2C ────────────────────────────────────────────────────────
+  - name: Lenskart
+    slug: lenskart
+    tier: "2"
+    domain: ecommerce/D2C
+    hq: Delhi
+
+  - name: Mamaearth
+    slug: mamaearth
+    tier: "2"
+    domain: D2C/FMCG
+    hq: Gurgaon
+
+  - name: Purplle
+    slug: purplle
+    tier: "2"
+    domain: beauty/ecommerce
+    hq: Mumbai
+
+  - name: Zivame
+    slug: zivame
+    tier: "2"
+    domain: fashion/D2C
+    hq: Bangalore
+
+  # ── Logistics / Supply Chain ───────────────────────────────────────────────
+  - name: Shadowfax
+    slug: shadowfax
+    tier: "2"
+    domain: logistics
+    hq: Bangalore
+
+  - name: Rivigo
+    slug: rivigo
+    tier: "2"
+    domain: trucking/logistics
+    hq: Gurgaon
+
+  - name: ElasticRun
+    slug: elasticrun
+    tier: "2"
+    domain: B2B distribution
+    hq: Pune
+
+  # ── AI / Deep Tech ─────────────────────────────────────────────────────────
+  - name: Gupshup
+    slug: gupshup
+    tier: "2"
+    domain: conversational AI
+    hq: Mumbai
+
+  - name: Hasura
+    slug: hasura
+    tier: "2"
+    domain: dev infra
+    hq: Bangalore
+
+  - name: Mad Street Den
+    slug: madstreetden
+    tier: "2"
+    domain: AI/computer vision
+    hq: Chennai
+
+  - name: Arya.ai
+    slug: arya-ai
+    tier: "2"
+    domain: AI/fintech
+    hq: Mumbai
+
+  # ── Analytics / Data ───────────────────────────────────────────────────────
+  - name: Mu Sigma
+    slug: mu-sigma
+    tier: "2"
+    domain: analytics services
+    hq: Bangalore
+
+  - name: Tiger Analytics
+    slug: tigeranalytics
+    tier: "2"
+    domain: analytics consulting
+    hq: Chennai
+
+  - name: Fractal Analytics
+    slug: fractal
+    tier: "2"
+    domain: analytics/AI
+    hq: Mumbai
+
+  - name: LatentView Analytics
+    slug: latentview
+    tier: "2"
+    domain: analytics consulting
+    hq: Chennai
+
+  # ── Other ──────────────────────────────────────────────────────────────────
+  - name: InMobi
+    slug: inmobi
+    tier: "1"
+    domain: adtech
+    hq: Bangalore
+
+  - name: Gojek India
+    slug: gojek
+    tier: "2"
+    domain: super-app/tech
+    hq: Bangalore
+
+  - name: Dunzo
+    slug: dunzo
+    tier: "2"
+    domain: quick commerce
+    hq: Bangalore
+
+  - name: Vedantu
+    slug: vedantu
+    tier: "2"
+    domain: edtech
+    hq: Bangalore
+
+  # ── Fintech — Additional ──────────────────────────────────────────────────
+  - name: Navi Technologies
+    slug: navi
+    tier: "2"
+    domain: fintech/insurance
+    hq: Bangalore
+
+  - name: Fampay
+    slug: fampay
+    tier: "2"
+    domain: neobank/teen
+    hq: Bangalore
+
+  - name: Freo
+    slug: freo
+    tier: "2"
+    domain: neobank/credit
+    hq: Bangalore
+
+  - name: Moxo
+    slug: moxo
+    tier: "2"
+    domain: fintech SaaS
+    hq: Bangalore
+
+  - name: Signzy
+    slug: signzy
+    tier: "2"
+    domain: fintech/KYC
+    hq: Bangalore
+
+  - name: Artoo
+    slug: artoo
+    tier: "2"
+    domain: fintech/lending
+    hq: Bangalore
+
+  - name: Yubi (CredAvenue)
+    slug: yubi
+    tier: "2"
+    domain: debt marketplace
+    hq: Chennai
+
+  - name: Mintifi
+    slug: mintifi
+    tier: "2"
+    domain: supply chain fintech
+    hq: Mumbai
+
+  - name: Progcap
+    slug: progcap
+    tier: "2"
+    domain: fintech/B2B credit
+    hq: Delhi
+
+  - name: Avail Finance
+    slug: availfinance
+    tier: "2"
+    domain: fintech/blue-collar
+    hq: Bangalore
+
+  # ── SaaS / B2B — Additional ────────────────────────────────────────────────
+  - name: Eka Plus
+    slug: ekaplus
+    tier: "2"
+    domain: wellness SaaS
+    hq: Bangalore
+
+  - name: Vyapar
+    slug: vyapar
+    tier: "2"
+    domain: SMB accounting SaaS
+    hq: Bangalore
+
+  - name: Zowork
+    slug: zowork
+    tier: "2"
+    domain: workforce SaaS
+    hq: Bangalore
+
+  - name: Numberz
+    slug: numberz
+    tier: "2"
+    domain: fintech SaaS
+    hq: Bangalore
+
+  - name: Ezetap
+    slug: ezetap
+    tier: "2"
+    domain: payments SaaS
+    hq: Bangalore
+
+  - name: Kredx
+    slug: kredx
+    tier: "2"
+    domain: trade finance
+    hq: Bangalore
+
+  - name: Happiest Minds
+    slug: happiestminds
+    tier: "2"
+    domain: IT services/digital
+    hq: Bangalore
+
+  - name: Sigmoid
+    slug: sigmoid
+    tier: "2"
+    domain: data engineering
+    hq: Bangalore
+
+  - name: DataWeave
+    slug: dataweave
+    tier: "2"
+    domain: retail analytics
+    hq: Bangalore
+
+  - name: Flutura
+    slug: flutura
+    tier: "2"
+    domain: industrial analytics
+    hq: Bangalore
+
+  - name: Absolutdata
+    slug: absolutdata
+    tier: "2"
+    domain: analytics consulting
+    hq: Delhi
+
+  - name: Axtria
+    slug: axtria
+    tier: "2"
+    domain: analytics/pharma
+    hq: Gurgaon
+
+  # ── Edtech — Additional ────────────────────────────────────────────────────
+  - name: Classplus
+    slug: classplus
+    tier: "2"
+    domain: edtech/B2B
+    hq: Noida
+
+  - name: Teachmint
+    slug: teachmint
+    tier: "2"
+    domain: edtech/SaaS
+    hq: Bangalore
+
+  - name: Konversai
+    slug: konversai
+    tier: "2"
+    domain: edtech/mentoring
+    hq: Delhi
+
+  - name: iNeuron
+    slug: ineuron
+    tier: "2"
+    domain: edtech/tech
+    hq: Bangalore
+
+
+lever:
+
+  # ── Tier 1 ─────────────────────────────────────────────────────────────────
+  - name: CRED
+    slug: cred
+    tier: "1"
+    domain: fintech
+    hq: Bangalore
+
+  - name: Groww
+    slug: growwapp
+    tier: "1"
+    domain: fintech/investment
+    hq: Bangalore
+
+  - name: Zepto
+    slug: zepto
+    tier: "1"
+    domain: quick commerce
+    hq: Mumbai
+
+  - name: Meesho
+    slug: meesho
+    tier: "1"
+    domain: social commerce
+    hq: Bangalore
+
+  - name: Ola Electric
+    slug: olaelectric
+    tier: "1"
+    domain: EV/hardware
+    hq: Bangalore
+
+  - name: MakeMyTrip
+    slug: makemytrip
+    tier: "1"
+    domain: travel tech
+    hq: Gurgaon
+
+  # ── Fintech ────────────────────────────────────────────────────────────────
+  - name: Paytm Money
+    slug: paytmmoney
+    tier: "2"
+    domain: fintech/investment
+    hq: Noida
+
+  - name: KreditBee
+    slug: kreditbee
+    tier: "2"
+    domain: fintech/lending
+    hq: Bangalore
+
+  - name: MoneyTap
+    slug: moneytap
+    tier: "2"
+    domain: fintech/credit
+    hq: Bangalore
+
+  - name: Kissht
+    slug: kissht
+    tier: "2"
+    domain: fintech/lending
+    hq: Mumbai
+
+  - name: ZestMoney
+    slug: zestmoney
+    tier: "2"
+    domain: BNPL/fintech
+    hq: Bangalore
+
+  - name: Fibe (EarlySalary)
+    slug: earlysalary
+    tier: "2"
+    domain: fintech/salary
+    hq: Pune
+
+  - name: Mswipe
+    slug: mswipe
+    tier: "2"
+    domain: fintech/payments
+    hq: Mumbai
+
+  # ── SaaS / B2B ─────────────────────────────────────────────────────────────
+  - name: Zenoti
+    slug: zenoti
+    tier: "2"
+    domain: SaaS/wellness
+    hq: Hyderabad
+
+  - name: Icertis
+    slug: icertis
+    tier: "2"
+    domain: SaaS/legal
+    hq: Pune
+
+  - name: Vymo
+    slug: vymo
+    tier: "2"
+    domain: SaaS/sales
+    hq: Bangalore
+
+  - name: Mindtickle
+    slug: mindtickle
+    tier: "2"
+    domain: SaaS/sales enablement
+    hq: Pune
+
+  - name: Haptik
+    slug: haptik
+    tier: "2"
+    domain: conversational AI
+    hq: Mumbai
+
+  - name: Exotel
+    slug: exotel
+    tier: "2"
+    domain: CPaaS
+    hq: Bangalore
+
+  - name: Eka Software
+    slug: eka
+    tier: "2"
+    domain: commodity SaaS
+    hq: Bangalore
+
+  # ── Logistics / Ops ────────────────────────────────────────────────────────
+  - name: Urban Company
+    slug: urbanclap
+    tier: "2"
+    domain: home services
+    hq: Gurgaon
+
+  - name: Zetwerk
+    slug: zetwerk
+    tier: "2"
+    domain: manufacturing/B2B
+    hq: Bangalore
+
+  - name: Ninjacart
+    slug: ninjacart
+    tier: "2"
+    domain: agritech/supply chain
+    hq: Bangalore
+
+  - name: Spinny
+    slug: spinny
+    tier: "2"
+    domain: used-car marketplace
+    hq: Gurgaon
+
+  - name: Delhivery
+    slug: delhivery
+    tier: "2"
+    domain: logistics
+    hq: Gurgaon
+
+  - name: BlackBuck
+    slug: blackbuck
+    tier: "2"
+    domain: trucking/logistics
+    hq: Bangalore
+
+  - name: Shiprocket
+    slug: shiprocket
+    tier: "2"
+    domain: logistics SaaS
+    hq: Delhi
+
+  - name: Porter
+    slug: porter
+    tier: "2"
+    domain: last-mile logistics
+    hq: Bangalore
+
+  - name: Blowhorn
+    slug: blowhorn
+    tier: "2"
+    domain: intra-city logistics
+    hq: Bangalore
+
+  # ── Health / Bio ───────────────────────────────────────────────────────────
+  - name: PharmEasy
+    slug: pharmeasy
+    tier: "2"
+    domain: healthtech/pharma
+    hq: Mumbai
+
+  - name: Pristyn Care
+    slug: pristyncare
+    tier: "2"
+    domain: healthtech/surgery
+    hq: Gurgaon
+
+  - name: Cure.fit
+    slug: curefit
+    tier: "2"
+    domain: fitness/health
+    hq: Bangalore
+
+  - name: Aster DM Healthcare
+    slug: asterdm
+    tier: "2"
+    domain: healthcare
+    hq: Bangalore
+
+  # ── Food / D2C ─────────────────────────────────────────────────────────────
+  - name: Licious
+    slug: licious
+    tier: "2"
+    domain: D2C/fresh food
+    hq: Bangalore
+
+  - name: Country Delight
+    slug: countrydelight
+    tier: "2"
+    domain: D2C/dairy
+    hq: Delhi
+
+  - name: Eat Club
+    slug: eatclub
+    tier: "2"
+    domain: B2B food
+    hq: Mumbai
+
+  # ── Real Estate / Prop Tech ────────────────────────────────────────────────
+  - name: NoBroker
+    slug: nobroker
+    tier: "2"
+    domain: proptech
+    hq: Bangalore
+
+  - name: Square Yards
+    slug: squareyards
+    tier: "2"
+    domain: proptech
+    hq: Gurgaon
+
+  - name: Housing.com
+    slug: housing
+    tier: "2"
+    domain: proptech
+    hq: Mumbai
+
+  # ── Travel ─────────────────────────────────────────────────────────────────
+  - name: ixigo
+    slug: ixigo
+    tier: "2"
+    domain: travel tech
+    hq: Gurgaon
+
+  - name: EaseMyTrip
+    slug: easemytrip
+    tier: "2"
+    domain: travel tech
+    hq: Delhi
+
+  - name: RateGain
+    slug: rategain
+    tier: "2"
+    domain: travel SaaS
+    hq: Noida
+
+  # ── HR Tech ────────────────────────────────────────────────────────────────
+  - name: Springworks
+    slug: springworks
+    tier: "2"
+    domain: HR tech
+    hq: Bangalore
+
+  - name: Keka HR
+    slug: keka
+    tier: "2"
+    domain: HR tech
+    hq: Hyderabad
+
+  - name: sumHR
+    slug: sumhr
+    tier: "2"
+    domain: HR tech
+    hq: Mumbai
+
+  # ── B2B / SaaS — Additional ────────────────────────────────────────────────
+  - name: Bizongo
+    slug: bizongo
+    tier: "2"
+    domain: B2B packaging/supply
+    hq: Mumbai
+
+  - name: Moglix
+    slug: moglix
+    tier: "2"
+    domain: B2B industrial
+    hq: Noida
+
+  - name: Ofbusiness
+    slug: ofbusiness
+    tier: "2"
+    domain: B2B raw materials
+    hq: Gurgaon
+
+  - name: Yash Technologies
+    slug: yash-technologies
+    tier: "2"
+    domain: IT consulting
+    hq: Indore
+
+  - name: Niswey
+    slug: niswey
+    tier: "2"
+    domain: marketing tech
+    hq: Delhi
+
+  # ── Consumer Tech — Additional ─────────────────────────────────────────────
+  - name: Styli (Landmark Group)
+    slug: styli
+    tier: "2"
+    domain: fashion ecommerce
+    hq: Dubai/India
+
+  - name: Fashinza
+    slug: fashinza
+    tier: "2"
+    domain: fashion B2B
+    hq: Delhi
+
+  - name: Zilingo India
+    slug: zilingo
+    tier: "2"
+    domain: fashion tech
+    hq: Bangalore
+
+  - name: Tata 1mg
+    slug: tata1mg
+    tier: "1"
+    domain: healthtech/pharma
+    hq: Gurgaon
+
+  - name: Apollo 24/7
+    slug: apollo247
+    tier: "2"
+    domain: healthtech
+    hq: Hyderabad
+
+  - name: Medikabazaar
+    slug: medikabazaar
+    tier: "2"
+    domain: B2B medtech
+    hq: Mumbai
+
+  # ── Climate / Sustainability ───────────────────────────────────────────────
+  - name: Euler Motors
+    slug: eulermotors
+    tier: "2"
+    domain: EV/commercial
+    hq: Delhi
+
+  - name: Log9 Materials
+    slug: log9materials
+    tier: "2"
+    domain: EV batteries
+    hq: Bangalore
+
+  - name: Climes
+    slug: climes
+    tier: "2"
+    domain: climate fintech
+    hq: Bangalore
+
+
+ashby:
+
+  # ── AI / Deep Tech ─────────────────────────────────────────────────────────
+  - name: Sarvam AI
+    slug: sarvam
+    tier: "1"
+    domain: AI/LLM
+    hq: Bangalore
+
+  - name: Krutrim
+    slug: krutrim
+    tier: "1"
+    domain: AI
+    hq: Bangalore
+
+  - name: Yellow.ai
+    slug: yellowai
+    tier: "2"
+    domain: conversational AI
+    hq: Bangalore
+
+  - name: Gnani AI
+    slug: gnani
+    tier: "2"
+    domain: voice AI
+    hq: Bangalore
+
+  - name: Mihup
+    slug: mihup
+    tier: "2"
+    domain: voice AI
+    hq: Kolkata
+
+  - name: Observe.AI
+    slug: observeai
+    tier: "2"
+    domain: AI/contact center
+    hq: Bangalore
+
+  - name: Avaamo
+    slug: avaamo
+    tier: "2"
+    domain: conversational AI
+    hq: Bangalore
+
+  # ── Mobility ───────────────────────────────────────────────────────────────
+  - name: Ola
+    slug: olacabs
+    tier: "1"
+    domain: mobility
+    hq: Bangalore
+
+  - name: Yulu
+    slug: yulu
+    tier: "2"
+    domain: micro-mobility/EV
+    hq: Bangalore
+
+  - name: Bounce
+    slug: bounce
+    tier: "2"
+    domain: micro-mobility
+    hq: Bangalore
+
+  # ── Fintech ────────────────────────────────────────────────────────────────
+  - name: Slice
+    slug: sliceit
+    tier: "2"
+    domain: fintech/BNPL
+    hq: Bangalore
+
+  - name: Jar
+    slug: jar-app
+    tier: "2"
+    domain: savings/fintech
+    hq: Bangalore
+
+  - name: Fi Money
+    slug: epifi
+    tier: "2"
+    domain: neobank
+    hq: Bangalore
+
+  - name: Smallcase
+    slug: smallcase
+    tier: "2"
+    domain: investment/fintech
+    hq: Bangalore
+
+  - name: INDmoney
+    slug: indmoney
+    tier: "2"
+    domain: wealth management
+    hq: Gurgaon
+
+  - name: Fisdom
+    slug: fisdom
+    tier: "2"
+    domain: wealth management
+    hq: Bangalore
+
+  - name: Rupeek
+    slug: rupeek
+    tier: "2"
+    domain: fintech/gold loans
+    hq: Bangalore
+
+  - name: Kredivo
+    slug: kredivo
+    tier: "2"
+    domain: BNPL
+    hq: Bangalore
+
+  - name: Stashfin
+    slug: stashfin
+    tier: "2"
+    domain: fintech/credit
+    hq: Delhi
+
+  # ── SaaS / Infra ───────────────────────────────────────────────────────────
+  - name: Leegality
+    slug: leegality
+    tier: "2"
+    domain: legaltech/esign
+    hq: Delhi
+
+  - name: Paperflite
+    slug: paperflite
+    tier: "2"
+    domain: sales enablement SaaS
+    hq: Chennai
+
+  - name: Zeta Suite
+    slug: zeta
+    tier: "2"
+    domain: HR/benefits SaaS
+    hq: Bangalore
+
+  - name: Sprinto
+    slug: sprinto
+    tier: "2"
+    domain: compliance SaaS
+    hq: Bangalore
+
+  - name: Facilio
+    slug: facilio
+    tier: "2"
+    domain: property ops SaaS
+    hq: Chennai
+
+  - name: Toplyne
+    slug: toplyne
+    tier: "2"
+    domain: product-led growth SaaS
+    hq: Bangalore
+
+  - name: Suprsend
+    slug: suprsend
+    tier: "2"
+    domain: notifications infra
+    hq: Bangalore
+
+  # ── Climate / Sustainability ───────────────────────────────────────────────
+  - name: Recykal
+    slug: recykal
+    tier: "2"
+    domain: sustainability/waste
+    hq: Hyderabad
+    note: current employer — skip for applications
+
+  - name: Ather Energy
+    slug: atherenergy
+    tier: "2"
+    domain: EV/clean energy
+    hq: Bangalore
+
+  - name: Greenpanel
+    slug: greenpanel
+    tier: "2"
+    domain: sustainability
+    hq: Kolkata
+
+  # ── Agritech ──────────────────────────────────────────────────────────────
+  - name: DeHaat
+    slug: dehaat
+    tier: "2"
+    domain: agritech
+    hq: Patna/Gurgaon
+
+  - name: Waycool
+    slug: waycool
+    tier: "2"
+    domain: agritech/supply chain
+    hq: Chennai
+
+  - name: Bijak
+    slug: bijak
+    tier: "2"
+    domain: agritech/B2B
+    hq: Gurgaon
+
+  # ── Insurance Tech ─────────────────────────────────────────────────────────
+  - name: Acko
+    slug: acko
+    tier: "2"
+    domain: insurtech
+    hq: Bangalore
+
+  - name: Digit Insurance
+    slug: digit
+    tier: "2"
+    domain: insurtech
+    hq: Bangalore
+
+  - name: Turtlemint
+    slug: turtlemint
+    tier: "2"
+    domain: insurtech
+    hq: Mumbai
+
+  # ── Additional Ashby ──────────────────────────────────────────────────────
+  - name: Slintel (6sense India)
+    slug: slintel
+    tier: "2"
+    domain: B2B sales intelligence
+    hq: Bangalore
+
+  - name: DealShare
+    slug: dealshare
+    tier: "2"
+    domain: social commerce
+    hq: Jaipur
+
+  - name: GlobalBees
+    slug: globalbees
+    tier: "2"
+    domain: D2C aggregator
+    hq: Gurgaon
+
+  - name: Mensa Brands
+    slug: mensabrands
+    tier: "2"
+    domain: D2C aggregator
+    hq: Bangalore
+
+  - name: Khatabook
+    slug: khatabook
+    tier: "2"
+    domain: SMB fintech
+    hq: Bangalore
+
+  - name: OkCredit
+    slug: okcredit
+    tier: "2"
+    domain: SMB fintech
+    hq: Bangalore
+
+  - name: BetterPlace
+    slug: betterplace
+    tier: "2"
+    domain: blue-collar HR tech
+    hq: Bangalore
+
+  - name: Apna
+    slug: apna-com
+    tier: "2"
+    domain: job platform/blue-collar
+    hq: Bangalore
+
+  - name: Vokal
+    slug: vokal
+    tier: "2"
+    domain: vernacular content
+    hq: Bangalore
+
+  - name: Kutumb
+    slug: kutumb
+    tier: "2"
+    domain: community platform
+    hq: Bangalore
+
+  - name: ShareChat
+    slug: sharechat
+    tier: "2"
+    domain: social media
+    hq: Bangalore
+
+  - name: Moj (ShareChat)
+    slug: moj
+    tier: "2"
+    domain: short video
+    hq: Bangalore
+
+  - name: Josh (DailyHunt)
+    slug: josh
+    tier: "2"
+    domain: short video/content
+    hq: Bangalore
+
+  - name: Verse Innovation (DailyHunt)
+    slug: verseinnovation
+    tier: "2"
+    domain: news/content
+    hq: Bangalore
+
+  - name: Pocket FM
+    slug: pocketfm
+    tier: "2"
+    domain: audio content
+    hq: Bangalore
+
+  - name: Pratilipi
+    slug: pratilipi
+    tier: "2"
+    domain: vernacular content
+    hq: Bangalore
+
+  - name: OneCode
+    slug: onecode
+    tier: "2"
+    domain: insurance distribution
+    hq: Bangalore
+
+  - name: Nira Finance
+    slug: nira-finance
+    tier: "2"
+    domain: fintech/credit
+    hq: Bangalore
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Companies on Workday (requires browser automation — not yet supported by scanner)
+# Uncomment and build workday scraper to enable these
+# ─────────────────────────────────────────────────────────────────────────────
+# workday:
+#   - name: Flipkart
+#     careers_url: https://www.flipkartcareers.com
+#   - name: Swiggy
+#     careers_url: https://careers.swiggy.com
+#   - name: PhonePe
+#     careers_url: https://careers.phonepe.com
+#   - name: Nykaa
+#     careers_url: https://careers.nykaa.com
+#   - name: Paytm
+#     careers_url: https://paytm.com/careers
+#   - name: PolicyBazaar
+#     careers_url: https://careers.policybazaar.com
+#   - name: Zoho
+#     careers_url: https://careers.zohocorp.com

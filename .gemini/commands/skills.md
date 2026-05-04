@@ -1,0 +1,1 @@
+Load modes/_shared.md, cv.md, config/profile.yml, data/scan_results.json (if exists), then modes/skill-gap.md. Analyze my skill gaps against what the market is asking for.

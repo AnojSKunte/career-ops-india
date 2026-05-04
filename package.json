@@ -1,0 +1,35 @@
+{
+  "name": "career-ops-india",
+  "version": "1.0.0",
+  "description": "AI-powered job search pipeline for the Indian market. Works with Claude Code and Gemini CLI.",
+  "type": "module",
+  "scripts": {
+    "scan":      "node scripts/scan.mjs",
+    "pdf":       "node scripts/generate-pdf.mjs",
+    "doctor":    "node scripts/doctor.mjs",
+    "liveness":  "node scripts/check-liveness.mjs",
+    "verify":    "node scripts/verify-pipeline.mjs",
+    "dedup":     "node scripts/dedup-tracker.mjs",
+    "sync-check":"node scripts/cv-sync-check.mjs",
+    "dashboard": "node scripts/open-dashboard.mjs",
+    "setup":     "node scripts/doctor.mjs && echo '\nSetup complete. Run: npm run scan'"
+  },
+  "keywords": [
+    "ai", "job-search", "india", "claude-code", "gemini-cli",
+    "career", "automation", "naukri", "linkedin", "greenhouse"
+  ],
+  "author": "Anoj S K <https://github.com/AnojSKunte>",
+  "homepage": "https://github.com/AnojSKunte/career-ops-india",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnojSKunte/career-ops-india"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "puppeteer": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

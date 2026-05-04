@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV</title>
+<style>
+  /* ATS-safe: no columns, no tables, no text boxes, no graphics */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Calibri', 'Arial', sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #1a1a1a;
+    background: white;
+    max-width: 210mm;
+  }
+
+  .cv-wrapper {
+    padding: 0; /* margins handled by Puppeteer */
+  }
+
+  /* Header — name + contact */
+  h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #111;
+    margin-bottom: 2px;
+    border: none;
+  }
+
+  /* Contact line (rendered from bold text after h1) */
+  h1 + p, h1 + strong {
+    font-size: 9.5pt;
+    color: #444;
+    margin-bottom: 10px;
+  }
+
+  /* Section headers */
+  h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #1a1a1a;
+    border-bottom: 1.5px solid #1a1a1a;
+    padding-bottom: 2px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+
+  /* Role title inside experience */
+  h3 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: #111;
+    margin-top: 6px;
+    margin-bottom: 1px;
+  }
+
+  /* Date lines (italic text) */
+  .date, em, i {
+    font-size: 9.5pt;
+    color: #555;
+    font-style: italic;
+  }
+
+  p {
+    margin-bottom: 4px;
+  }
+
+  /* Bullet points */
+  ul {
+    margin: 3px 0 6px 16px;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 2.5px;
+    padding-left: 2px;
+    list-style-type: disc;
+    font-size: 10pt;
+  }
+
+  strong { font-weight: 700; }
+
+  /* Divider */
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 8px 0;
+  }
+
+  /* Links — show plain text for ATS */
+  a {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  /* Skills inline */
+  code {
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    padding: 0;
+  }
+
+  /* Print optimization */
+  @media print {
+    body { -webkit-print-color-adjust: exact; }
+    h2 { page-break-after: avoid; }
+    h3 { page-break-after: avoid; }
+    ul { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="cv-wrapper">
+{{CV_CONTENT}}
+</div>
+</body>
+</html>

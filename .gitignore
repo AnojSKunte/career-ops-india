@@ -1,0 +1,27 @@
+# Personal data — NEVER commit these
+cv.md
+config/profile.yml
+data/pipeline.json
+data/scan_results.json
+data/dashboard_preview.html
+data/*.bak
+reports/
+output/
+
+# Keep templates and examples
+!config/profile.example.yml
+!data/.gitkeep
+!reports/.gitkeep
+!output/.gitkeep
+
+# Node
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+*.env

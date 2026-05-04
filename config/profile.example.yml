@@ -1,0 +1,59 @@
+# config/profile.example.yml
+# ─────────────────────────────────────────────────────────────────────────────
+# SETUP: Copy this file to config/profile.yml and fill in YOUR details.
+# This file stays as a template. profile.yml is gitignored (your data stays local).
+# ─────────────────────────────────────────────────────────────────────────────
+
+candidate:
+  name: Your Full Name
+  email: your@email.com
+  phone: "+91-XXXXXXXXXX"
+  linkedin: https://linkedin.com/in/yourusername
+  github: https://github.com/yourusername
+  education: B.Tech [Branch], [College Name], [Year]
+  experience_years: 1.5
+  current_role: Your Current Role at Company Name
+  current_ctc_lpa: 8          # Your current CTC (used for negotiation context)
+  notice_period_days: 30
+
+  skills:
+    - Python
+    - SQL
+    - pandas
+    # Add only skills you can actually demonstrate in an interview.
+    # Don't pad this. The AI will use this to evaluate every job.
+
+  target_roles:
+    - Data Analyst
+    - Analytics Engineer
+    - Business Analyst
+    - Product Analyst
+
+  target_salary_lpa:
+    min: 10           # Hard floor — never apply below this
+    max: 16           # Ideal target for negotiation
+    walk_away: 9      # If offer is below this, walk away
+
+  locations:
+    - Bangalore
+    - Hyderabad
+    - Mumbai
+    - Remote
+    # Remove cities you genuinely wouldn't relocate to.
+
+  career_narrative: |
+    One paragraph about who you are, what you've built, and where you're heading.
+    The AI uses this to write your CV summary and outreach messages.
+    Be specific. Generic narratives produce generic outputs.
+
+search:
+  experience_filter: "0-2"    # Naukri/portal filter (years)
+  freshness_days: 14           # Only jobs posted in last N days
+  boards:
+    greenhouse: true
+    lever: true
+    ashby: true
+
+evaluator:
+  min_score_to_include: 3.5   # Grade C+ and above (1.0–5.0 scale)
+  auto_log_to_tracker: true   # Auto-add A/B jobs to pipeline after evaluation

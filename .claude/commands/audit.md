@@ -1,0 +1,1 @@
+Load modes/_shared.md, cv.md, then modes/resume-audit.md. Audit my resume cold — no job needed. Give me the full 6-step report.

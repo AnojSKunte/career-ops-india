@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>career-ops-india — Pipeline Dashboard</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #22263a;
+    --border: #2d3148;
+    --text: #e8eaf0;
+    --muted: #7b82a0;
+    --green: #22c55e;
+    --yellow: #f59e0b;
+    --red: #ef4444;
+    --blue: #3b82f6;
+    --purple: #a855f7;
+    --orange: #f97316;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header h1 { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; }
+  header h1 span { color: var(--blue); }
+  header .meta { font-size: 12px; color: var(--muted); }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 28px 24px; }
+
+  /* Stats row */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .stat .num { font-size: 28px; font-weight: 700; line-height: 1; margin-bottom: 4px; }
+  .stat .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; }
+
+  /* Pipeline stages */
+  .pipeline-header {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .kanban {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .column {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .column-title {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .column-title .dot { width: 7px; height: 7px; border-radius: 50%; }
+  .card {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .card .company { font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .card .role    { color: var(--muted); font-size: 11px; }
+  .card .score   { margin-top: 6px; }
+  .card .date    { font-size: 10px; color: var(--muted); margin-top: 4px; }
+  .card a { color: var(--blue); text-decoration: none; font-size: 10px; }
+  .card a:hover { text-decoration: underline; }
+
+  /* Grade badges */
+  .grade {
+    display: inline-block;
+    padding: 1px 7px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .grade-A { background: #14532d; color: #86efac; }
+  .grade-B { background: #1c3a5e; color: #93c5fd; }
+  .grade-C { background: #3d2f00; color: #fcd34d; }
+  .grade-D { background: #3d1212; color: #fca5a5; }
+  .grade-F { background: #2d1f2d; color: #d8b4fe; }
+
+  /* Full list table */
+  .section-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th {
+    text-align: left;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  tr:hover td { background: var(--surface); }
+  .status-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .s-to_apply    { background: #1e2540; color: var(--muted); }
+  .s-applied     { background: #1c3a5e; color: #93c5fd; }
+  .s-hr_screen   { background: #3d2f00; color: #fcd34d; }
+  .s-technical   { background: #3d1f00; color: #fed7aa; }
+  .s-final_round { background: #2d1f00; color: #fdba74; }
+  .s-offer       { background: #14532d; color: #86efac; }
+  .s-accepted    { background: #064e3b; color: #6ee7b7; }
+  .s-rejected    { background: #3d1212; color: #fca5a5; }
+  .s-withdrawn   { background: #2d2d2d; color: var(--muted); }
+  .s-expired     { background: #2d1f2d; color: #d8b4fe; }
+
+  .empty { text-align: center; padding: 60px; color: var(--muted); font-size: 14px; }
+  .empty a { color: var(--blue); }
+
+  footer { text-align: center; padding: 32px; font-size: 11px; color: var(--muted); }
+  footer a { color: var(--blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>career-ops<span>-india</span> &nbsp;/&nbsp; Pipeline Dashboard</h1>
+  <span class="meta" id="meta"></span>
+</header>
+
+<div class="container">
+  <div id="app"></div>
+</div>
+
+<footer>
+  career-ops-india by <a href="https://github.com/AnojSKunte">Anoj S K</a> &nbsp;·&nbsp;
+  <a href="https://github.com/AnojSKunte/career-ops-india">GitHub</a>
+</footer>
+
+<script>
+const PIPELINE = {{PIPELINE_DATA}};
+
+const STATUS_ORDER = [
+  "offer", "final_round", "technical", "hr_screen",
+  "applied", "to_apply", "accepted", "rejected", "withdrawn", "expired"
+];
+
+const STATUS_COLORS = {
+  to_apply:    "#4b5563",
+  applied:     "#3b82f6",
+  hr_screen:   "#f59e0b",
+  technical:   "#f97316",
+  final_round: "#f97316",
+  offer:       "#22c55e",
+  accepted:    "#10b981",
+  rejected:    "#ef4444",
+  withdrawn:   "#6b7280",
+  expired:     "#a855f7",
+};
+
+const ACTIVE = ["to_apply","applied","hr_screen","technical","final_round","offer"];
+
+function gradeFromScore(score) {
+  if (!score) return null;
+  if (score >= 4.5) return "A";
+  if (score >= 4.0) return "B";
+  if (score >= 3.5) return "C";
+  if (score >= 3.0) return "D";
+  return "F";
+}
+
+function daysAgo(dateStr) {
+  if (!dateStr) return "";
+  const d = Math.floor((Date.now() - new Date(dateStr)) / 86400000);
+  return d === 0 ? "today" : d === 1 ? "yesterday" : `${d}d ago`;
+}
+
+function render() {
+  const app = document.getElementById("app");
+  document.getElementById("meta").textContent =
+    `${PIPELINE.length} applications · Updated ${new Date().toLocaleDateString("en-IN")}`;
+
+  if (PIPELINE.length === 0) {
+    app.innerHTML = `<div class="empty">
+      <p>No applications tracked yet.</p>
+      <p style="margin-top:8px">Open Claude Code or Gemini CLI and run <code>/tracker</code> to start logging.</p>
+    </div>`;
+    return;
+  }
+
+  // Stats
+  const active    = PIPELINE.filter(j => ACTIVE.includes(j.status)).length;
+  const offers    = PIPELINE.filter(j => j.status === "offer" || j.status === "accepted").length;
+  const rejected  = PIPELINE.filter(j => j.status === "rejected").length;
+  const toApply   = PIPELINE.filter(j => j.status === "to_apply").length;
+  const applied   = PIPELINE.filter(j => j.status !== "to_apply").length;
+
+  const scores    = PIPELINE.map(j => j.score).filter(Boolean);
+  const avgScore  = scores.length ? (scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1) : "—";
+
+  // Conversion
+  const appCount  = PIPELINE.filter(j => j.status !== "to_apply").length;
+  const hrCount   = PIPELINE.filter(j => ["hr_screen","technical","final_round","offer","accepted"].includes(j.status)).length;
+  const convRate  = appCount > 0 ? Math.round(hrCount / appCount * 100) : 0;
+
+  app.innerHTML = `
+  <div class="stats">
+    <div class="stat"><div class="num" style="color:var(--blue)">${active}</div><div class="label">Active</div></div>
+    <div class="stat"><div class="num" style="color:var(--yellow)">${toApply}</div><div class="label">To Apply</div></div>
+    <div class="stat"><div class="num" style="color:var(--green)">${offers}</div><div class="label">Offers</div></div>
+    <div class="stat"><div class="num" style="color:var(--red)">${rejected}</div><div class="label">Rejected</div></div>
+    <div class="stat"><div class="num">${avgScore}</div><div class="label">Avg Score</div></div>
+    <div class="stat"><div class="num" style="color:var(--purple)">${convRate}%</div><div class="label">→ Interview</div></div>
+  </div>
+
+  <div class="pipeline-header">Pipeline Stages</div>
+  <div class="kanban" id="kanban"></div>
+
+  <div class="section-title">All Applications</div>
+  <table>
+    <thead><tr>
+      <th>Score</th><th>Company</th><th>Role</th><th>Status</th>
+      <th>Location</th><th>Salary</th><th>Found</th><th>Link</th>
+    </tr></thead>
+    <tbody id="table-body"></tbody>
+  </table>`;
+
+  // Kanban
+  const kanban = document.getElementById("kanban");
+  const stages = ["offer", "final_round", "technical", "hr_screen", "applied", "to_apply"];
+  const stageLabels = {
+    offer: "🎉 Offer", final_round: "🔥 Final", technical: "💻 Technical",
+    hr_screen: "📞 HR Screen", applied: "✉️ Applied", to_apply: "📋 To Apply"
+  };
+
+  for (const stage of stages) {
+    const jobs = PIPELINE.filter(j => j.status === stage);
+    if (jobs.length === 0 && stage !== "to_apply" && stage !== "applied") continue;
+    const col = document.createElement("div");
+    col.className = "column";
+    col.innerHTML = `<div class="column-title">
+      <span class="dot" style="background:${STATUS_COLORS[stage]}"></span>
+      ${stageLabels[stage]} <span style="color:var(--muted);font-weight:400">(${jobs.length})</span>
+    </div>`;
+    for (const j of jobs.slice(0, 8)) {
+      const grade = gradeFromScore(j.score);
+      col.innerHTML += `<div class="card">
+        <div class="company">${j.company || "—"}</div>
+        <div class="role">${j.role || "—"}</div>
+        ${grade ? `<div class="score"><span class="grade grade-${grade}">${grade}</span></div>` : ""}
+        <div class="date">${daysAgo(j.date_found)}</div>
+        ${j.url ? `<div><a href="${j.url}" target="_blank">↗ View job</a></div>` : ""}
+      </div>`;
+    }
+    if (jobs.length > 8) {
+      col.innerHTML += `<div style="font-size:11px;color:var(--muted);text-align:center;padding:6px">+${jobs.length - 8} more</div>`;
+    }
+    kanban.appendChild(col);
+  }
+
+  // Table — sorted by score desc, then by status priority
+  const sorted = [...PIPELINE].sort((a, b) => {
+    if ((b.score || 0) !== (a.score || 0)) return (b.score || 0) - (a.score || 0);
+    return STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status);
+  });
+
+  const tbody = document.getElementById("table-body");
+  for (const j of sorted) {
+    const grade = gradeFromScore(j.score);
+    tbody.innerHTML += `<tr>
+      <td>${grade ? `<span class="grade grade-${grade}">${grade} ${j.score ? j.score.toFixed(1) : ""}</span>` : "—"}</td>
+      <td style="font-weight:600">${j.company || "—"}</td>
+      <td style="color:var(--muted)">${j.role || "—"}</td>
+      <td><span class="status-badge s-${j.status}">${j.status?.replace("_"," ") || "—"}</span></td>
+      <td style="color:var(--muted)">${j.location || "—"}</td>
+      <td style="color:var(--muted)">${j.salary_listed || "—"}</td>
+      <td style="color:var(--muted)">${daysAgo(j.date_found)}</td>
+      <td>${j.url ? `<a href="${j.url}" target="_blank" style="color:var(--blue)">↗</a>` : "—"}</td>
+    </tr>`;
+  }
+}
+
+render();
+</script>
+</body>
+</html>

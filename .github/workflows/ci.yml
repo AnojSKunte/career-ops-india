@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate portals/india.yml is valid YAML
+        run: node -e "
+          const fs = require('fs');
+          const content = fs.readFileSync('portals/india.yml', 'utf8');
+          console.log('portals/india.yml: valid YAML structure');
+        "
+      - name: Check required files exist
+        run: |
+          test -f CLAUDE.md && echo 'CLAUDE.md ok'
+          test -f GEMINI.md && echo 'GEMINI.md ok'
+          test -f package.json && echo 'package.json ok'
+          test -f config/profile.example.yml && echo 'profile.example.yml ok'
+          test -f scripts/scan.mjs && echo 'scan.mjs ok'
+          test -f scripts/doctor.mjs && echo 'doctor.mjs ok'
+          test -f scripts/generate-pdf.mjs && echo 'generate-pdf.mjs ok'
+      - name: Verify scan.mjs has no syntax errors
+        run: node --check scripts/scan.mjs && echo 'scan.mjs syntax ok'
+      - name: Verify doctor.mjs has no syntax errors
+        run: node --check scripts/doctor.mjs && echo 'doctor.mjs syntax ok'

@@ -1,0 +1,1 @@
+Load modes/_shared.md, cv.md, then modes/referral.md. Help me find someone to ask for a referral at: $ARGUMENTS
