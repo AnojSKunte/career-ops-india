@@ -5,7 +5,7 @@
 **AI-powered job search pipeline for the Indian market**
 
 Works with [Claude Code](https://claude.ai/code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli) (free).
-Scan 60+ Indian company career pages, evaluate fit with a structured rubric,
+Scan 130+ Indian company career pages, evaluate fit with a structured rubric,
 generate tailored PDFs, track your pipeline, prep for interviews.
 
 Built for early-career folks targeting **data, analytics, and product roles** in India.
