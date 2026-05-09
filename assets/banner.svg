@@ -1,0 +1,40 @@
+<svg width="100%" viewBox="0 0 680 220" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>career-ops-india banner</title>
+<desc>AI-powered job search pipeline for the Indian market</desc>
+<rect width="680" height="220" fill="#0d1117" rx="12"/>
+<line x1="0" y1="55" x2="680" y2="55" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+<line x1="0" y1="110" x2="680" y2="110" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+<line x1="0" y1="165" x2="680" y2="165" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+<line x1="170" y1="0" x2="170" y2="220" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+<line x1="340" y1="0" x2="340" y2="220" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+<line x1="510" y1="0" x2="510" y2="220" stroke="#ffffff" stroke-opacity="0.04" stroke-width="0.5"/>
+<circle cx="60" cy="50" r="80" fill="#3b82f6" fill-opacity="0.07"/>
+<circle cx="630" cy="180" r="100" fill="#f97316" fill-opacity="0.06"/>
+<rect x="0" y="0" width="680" height="3" fill="#FF9933" fill-opacity="0.7"/>
+<rect x="0" y="3" width="680" height="3" fill="#ffffff" fill-opacity="0.15"/>
+<rect x="0" y="6" width="680" height="3" fill="#138808" fill-opacity="0.7"/>
+<text x="40" y="100" font-family="monospace" font-size="38" font-weight="700" fill="#ffffff" letter-spacing="-1">career-ops-<tspan fill="#f97316">india</tspan></text>
+<text x="40" y="130" font-family="sans-serif" font-size="15" font-weight="400" fill="#94a3b8">AI-powered job search for the Indian market</text>
+<rect x="40" y="152" width="116" height="26" rx="13" fill="#1e293b"/>
+<text x="98" y="170" font-family="sans-serif" font-size="12" font-weight="500" fill="#60a5fa" text-anchor="middle">256 companies</text>
+<rect x="164" y="152" width="94" height="26" rx="13" fill="#1e293b"/>
+<text x="211" y="170" font-family="sans-serif" font-size="12" font-weight="500" fill="#34d399" text-anchor="middle">12 AI modes</text>
+<rect x="266" y="152" width="140" height="26" rx="13" fill="#1e293b"/>
+<text x="336" y="170" font-family="sans-serif" font-size="12" font-weight="500" fill="#fb923c" text-anchor="middle">Claude Code + Gemini</text>
+<rect x="414" y="152" width="90" height="26" rx="13" fill="#1e293b"/>
+<text x="459" y="170" font-family="sans-serif" font-size="12" font-weight="500" fill="#c084fc" text-anchor="middle">MIT license</text>
+<rect x="460" y="30" width="200" height="110" rx="8" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+<rect x="460" y="30" width="200" height="22" rx="0" fill="#21262d"/>
+<rect x="460" y="36" width="200" height="16" rx="0" fill="#21262d"/>
+<circle cx="475" cy="41" r="4" fill="#ff5f57"/>
+<circle cx="489" cy="41" r="4" fill="#febc2e"/>
+<circle cx="503" cy="41" r="4" fill="#28c840"/>
+<text x="526" y="45" font-family="monospace" font-size="10" fill="#6e7681" text-anchor="middle">terminal</text>
+<text x="474" y="70" font-family="monospace" font-size="10" fill="#7ee787">$ npm run scan</text>
+<text x="474" y="85" font-family="monospace" font-size="9.5" fill="#8b949e">Scanning 256 companies...</text>
+<text x="474" y="99" font-family="monospace" font-size="9.5" fill="#7ee787">&#x2705; 23 matching jobs found</text>
+<text x="474" y="113" font-family="monospace" font-size="9.5" fill="#58a6ff">&#xBB; /evaluate [url]</text>
+<text x="474" y="127" font-family="monospace" font-size="9.5" fill="#e6edf3">[B] Razorpay &#x2014; Data Analyst</text>
+<text x="40" y="205" font-family="sans-serif" font-size="11" fill="#475569">github.com/AnojSKunte/career-ops-india</text>
+<text x="640" y="205" font-family="sans-serif" font-size="11" fill="#475569" text-anchor="end">inspired by career-ops by Santiago</text>
+</svg>

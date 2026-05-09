@@ -892,6 +892,56 @@ lever:
     hq: Bangalore
 
 
+
+  # ── BFSI / Wealth / Stock Broking ─────────────────────────────────────────────
+  - name: Angel One
+    slug: angelone
+    tier: "2"
+    domain: stockbroking/fintech
+    hq: Mumbai
+
+  - name: IIFL Finance
+    slug: iifl
+    tier: "2"
+    domain: NBFC/lending
+    hq: Mumbai
+
+  - name: 5Paisa Capital
+    slug: 5paisa
+    tier: "2"
+    domain: discount broking
+    hq: Mumbai
+
+  - name: Samco Securities
+    slug: samco
+    tier: "2"
+    domain: stockbroking
+    hq: Mumbai
+
+  - name: Edelweiss Financial Services
+    slug: edelweiss
+    tier: "2"
+    domain: BFSI/wealth
+    hq: Mumbai
+
+  - name: RenewBuy
+    slug: renewbuy
+    tier: "2"
+    domain: insurtech/distribution
+    hq: Gurgaon
+
+  - name: Coverfox
+    slug: coverfox
+    tier: "2"
+    domain: insurtech/aggregator
+    hq: Mumbai
+
+  - name: PhillipCapital India
+    slug: phillipcapital
+    tier: "2"
+    domain: financial services
+    hq: Mumbai
+
 ashby:
 
   # ── AI / Deep Tech ─────────────────────────────────────────────────────────
@@ -1062,6 +1112,81 @@ ashby:
     hq: Hyderabad
     note: current employer — skip for applications
 
+  # ── Additional Ashby ──────────────────────────────────────────────────────────
+  - name: Zomato
+    slug: zomato
+    tier: "1"
+    domain: food delivery
+    hq: Gurgaon
+
+  - name: Blinkit
+    slug: blinkit
+    tier: "1"
+    domain: quick commerce
+    hq: Gurgaon
+
+  - name: Pepper Content
+    slug: peppercontent
+    tier: "2"
+    domain: content marketplace
+    hq: Mumbai
+
+  - name: Eruditus
+    slug: eruditus
+    tier: "2"
+    domain: executive edtech
+    hq: Mumbai
+
+  - name: Cuemath
+    slug: cuemath
+    tier: "2"
+    domain: edtech/math
+    hq: Bangalore
+
+  - name: Credgenics
+    slug: credgenics
+    tier: "2"
+    domain: fintech/collections
+    hq: Noida
+
+  - name: Karza Technologies
+    slug: karza
+    tier: "2"
+    domain: fintech/KYC/data
+    hq: Mumbai
+
+  - name: Pixxel
+    slug: pixxel
+    tier: "2"
+    domain: space tech/satellite
+    hq: Bangalore
+
+  - name: Agnikul Cosmos
+    slug: agnikul
+    tier: "2"
+    domain: space tech
+    hq: Chennai
+
+  - name: Skyroot Aerospace
+    slug: skyroot
+    tier: "2"
+    domain: space tech
+    hq: Hyderabad
+
+  - name: Unacademy (Graphy)
+    slug: graphy
+    tier: "2"
+    domain: creator edtech
+    hq: Bangalore
+
+  - name: Classmate (ITC)
+    slug: itc-classmate
+    tier: "2"
+    domain: stationery/consumer
+    hq: Kolkata
+
+
+
   - name: Ather Energy
     slug: atherenergy
     tier: "2"
@@ -1221,6 +1346,252 @@ ashby:
     domain: fintech/credit
     hq: Bangalore
 
+
+
+  # ── Additional Greenhouse ────────────────────────────────────────────────────
+  - name: Cars24
+    slug: cars24
+    tier: "1"
+    domain: used-car marketplace
+    hq: Gurgaon
+
+  - name: OYO Rooms
+    slug: oyorooms
+    tier: "1"
+    domain: hospitality/travel
+    hq: Gurgaon
+
+  - name: Upstox
+    slug: upstox
+    tier: "2"
+    domain: fintech/investment
+    hq: Mumbai
+
+  - name: Mobikwik
+    slug: mobikwik
+    tier: "2"
+    domain: fintech/wallet
+    hq: Gurgaon
+
+  - name: Capillary Technologies
+    slug: capillary
+    tier: "2"
+    domain: loyalty/SaaS
+    hq: Bangalore
+
+  - name: Kaleyra
+    slug: kaleyra
+    tier: "2"
+    domain: CPaaS/communication
+    hq: Bangalore
+
+  - name: CloudSEK
+    slug: cloudsek
+    tier: "2"
+    domain: cybersecurity/AI
+    hq: Bangalore
+
+  - name: Airmeet
+    slug: airmeet
+    tier: "2"
+    domain: virtual events SaaS
+    hq: Bangalore
+
+  - name: Droom
+    slug: droom
+    tier: "2"
+    domain: vehicle marketplace
+    hq: Gurgaon
+
+  - name: Tata Digital
+    slug: tatadigital
+    tier: "2"
+    domain: super-app/digital
+    hq: Mumbai
+
+  # ── Additional Lever ──────────────────────────────────────────────────────────
+  - name: Physics Wallah
+    slug: physicswallah
+    tier: "1"
+    domain: edtech
+    hq: Noida
+
+  - name: Udaan
+    slug: udaan
+    tier: "1"
+    domain: B2B commerce
+    hq: Bangalore
+
+  - name: FirstCry
+    slug: firstcry
+    tier: "2"
+    domain: baby/kids ecommerce
+    hq: Pune
+
+  - name: Wakefit
+    slug: wakefit
+    tier: "2"
+    domain: D2C/furniture
+    hq: Bangalore
+
+  - name: Pepperfry
+    slug: pepperfry
+    tier: "2"
+    domain: furniture ecommerce
+    hq: Mumbai
+
+  - name: boAt (Imagine Marketing)
+    slug: imaginemarketingltd
+    tier: "2"
+    domain: D2C/consumer electronics
+    hq: Delhi
+
+  - name: Sugar Cosmetics
+    slug: sugarcosmetics
+    tier: "2"
+    domain: D2C/beauty
+    hq: Mumbai
+
+  - name: MediBuddy
+    slug: medibuddy
+    tier: "2"
+    domain: health tech
+    hq: Bangalore
+
+  - name: Innoviti
+    slug: innoviti
+    tier: "2"
+    domain: fintech/payments
+    hq: Bangalore
+
+  - name: Stanza Living
+    slug: stanzaliving
+    tier: "2"
+    domain: co-living/proptech
+    hq: Delhi
+
+  - name: Awfis
+    slug: awfis
+    tier: "2"
+    domain: co-working/proptech
+    hq: Delhi
+
+  - name: Magicpin
+    slug: magicpin
+    tier: "2"
+    domain: local commerce
+    hq: Gurgaon
+
+
+  # ── Analytics Consulting / Data Services ──────────────────────────────────────
+  - name: Quantiphi
+    slug: quantiphi
+    tier: "2"
+    domain: AI/analytics consulting
+    hq: Mumbai
+
+  - name: Crayon Data
+    slug: crayondata
+    tier: "2"
+    domain: AI/personalization analytics
+    hq: Chennai
+
+  - name: Gramener
+    slug: gramener
+    tier: "2"
+    domain: data visualization/analytics
+    hq: Hyderabad
+
+  - name: Analytics Quotient
+    slug: analyticsquotient
+    tier: "2"
+    domain: analytics consulting
+    hq: Mumbai
+
+  - name: Evalueserve
+    slug: evalueserve
+    tier: "2"
+    domain: research/analytics BPO
+    hq: Gurgaon
+
+  - name: ZS Associates India
+    slug: zs-associates
+    tier: "2"
+    domain: analytics/pharma consulting
+    hq: Pune
+
+  - name: EXL Service
+    slug: exlservice
+    tier: "2"
+    domain: analytics/BPO
+    hq: Noida
+
+  - name: WNS Global Services
+    slug: wns
+    tier: "2"
+    domain: analytics/BPO
+    hq: Mumbai
+
+  - name: BRIDGEi2i Analytics
+    slug: bridgei2i
+    tier: "2"
+    domain: analytics consulting
+    hq: Bangalore
+
+  - name: Manthan
+    slug: manthan
+    tier: "2"
+    domain: retail analytics SaaS
+    hq: Bangalore
+
+  - name: MathCo (The Math Company)
+    slug: themathcompany
+    tier: "2"
+    domain: AI/analytics consulting
+    hq: Bangalore
+
+  - name: Subex
+    slug: subex
+    tier: "2"
+    domain: telecom analytics/AI
+    hq: Bangalore
+
+  # ── Financial Infrastructure / Fintech Data ────────────────────────────────────
+  - name: Nucleus Software
+    slug: nucleussoftware
+    tier: "2"
+    domain: lending software
+    hq: Noida
+
+  - name: Intellect Design Arena
+    slug: intellectdesign
+    tier: "2"
+    domain: banking/fintech software
+    hq: Chennai
+
+  - name: Finarkein Analytics
+    slug: finarkein
+    tier: "2"
+    domain: fintech data/AA framework
+    hq: Mumbai
+
+  - name: Sahamati
+    slug: sahamati
+    tier: "2"
+    domain: account aggregator/fintech
+    hq: Bangalore
+
+  - name: Artivatic Data Labs
+    slug: artivatic
+    tier: "2"
+    domain: AI/insurance analytics
+    hq: Bangalore
+
+  - name: Lendingkart
+    slug: lendingkart
+    tier: "2"
+    domain: SMB lending/fintech
+    hq: Ahmedabad
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Companies on Workday (requires browser automation — not yet supported by scanner)

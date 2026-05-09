@@ -1,11 +1,13 @@
 <div align="center">
 
+<img src="assets/banner.svg" alt="career-ops-india" width="100%"/>
+
 # career-ops-india
 
 **AI-powered job search pipeline for the Indian market**
 
 Works with [Claude Code](https://claude.ai/code) and [Gemini CLI](https://github.com/google-gemini/gemini-cli) (free).
-Scan ~200 Indian company career pages, evaluate fit with a structured rubric,
+Scan 60+ Indian company career pages, evaluate fit with a structured rubric,
 generate tailored PDFs, track your pipeline, prep for interviews.
 
 Built for early-career folks targeting **data, analytics, and product roles** in India.
@@ -24,7 +26,7 @@ Inspired by [career-ops](https://github.com/santifer/career-ops) by Santiago —
 
 | Command | What happens |
 |---|---|
-| `npm run scan` | Hits ATS APIs of 196 Indian companies. Returns matching jobs in ~30 seconds. No scraping. No login. |
+| `npm run scan` | Hits ATS APIs of 256 Indian companies. Returns matching jobs in ~30 seconds. No scraping. No login. |
 | `/evaluate [URL]` | Scores a job A–F across 10 dimensions. Flags ghost jobs, wrong level, salary gaps. |
 | `/batch [URLs]` | Evaluates up to 30 jobs at once. Ranks them. Cuts the noise. |
 | `/pdf [job]` | Rewrites your resume for a specific job — injects JD keywords, reorders bullets, stays truthful. |
@@ -173,15 +175,48 @@ npm run pdf           # Generate PDF (usually called via /pdf in AI CLI)
 
 ## Company coverage
 
-**196 Indian companies pre-configured** across 3 ATS systems:
+**256 Indian companies pre-configured** across 3 ATS systems:
 
 | ATS | Companies (sample) |
 |---|---|
-| Greenhouse (79) | Razorpay, BrowserStack, Postman, Freshworks, Chargebee, MoEngage, Clevertap, Darwinbox, Innovaccer, Gupshup, Fractal Analytics, InMobi, Perfios, upGrad, Scaler, Sigmoid, DataWeave, Axtria, Classplus, Teachmint + 59 more |
-| Lever (70) | CRED, Groww, Zepto, Meesho, MakeMyTrip, Ola Electric, Tata 1mg, Urban Company, Delhivery, BlackBuck, PharmEasy, NoBroker, Shiprocket, Moglix, Ofbusiness, Bizongo + 54 more |
-| Ashby (47) | Sarvam AI, Krutrim, Ola, Smallcase, Jar, Fi Money, Slice, INDmoney, Digit Insurance, Yellow.ai, Ather Energy, ShareChat, Apna, Pocket FM, Khatabook + 32 more |
+| Greenhouse (89) | Razorpay, BrowserStack, Postman, Freshworks, Chargebee, MoEngage, Clevertap, Darwinbox, Innovaccer, Gupshup, Fractal Analytics, InMobi, Perfios, upGrad, Scaler, Sigmoid, DataWeave, Axtria, Classplus, Teachmint + 59 more |
+| Lever (82) | CRED, Groww, Zepto, Meesho, MakeMyTrip, Ola Electric, Tata 1mg, Urban Company, Delhivery, BlackBuck, PharmEasy, NoBroker, Shiprocket, Moglix, Ofbusiness, Bizongo + 54 more |
+| Ashby (59) | Sarvam AI, Krutrim, Ola, Smallcase, Jar, Fi Money, Slice, INDmoney, Digit Insurance, Yellow.ai, Ather Energy, ShareChat, Apna, Pocket FM, Khatabook + 32 more |
 
 **To add a company:** find their careers URL, identify the ATS from the domain, add a 4-line entry to `portals/india.yml`. That's it.
+
+---
+
+## Sources covered
+
+### ATS companies (Greenhouse / Lever / Ashby) — `npm run scan`
+The cleanest, most reliable source. Companies post jobs directly to their ATS. The scanner hits the JSON APIs — no browser, no CAPTCHA, instant results.
+
+### LinkedIn — `npm run scan:linkedin`
+Uses LinkedIn's public guest API (`/jobs-guest/`). The same endpoint Google uses to index jobs. No login. No account. No cookie management. Parses HTML card responses. Adds 2–5s delay between requests to stay within rate limits.
+
+```bash
+npm run scan:linkedin
+# Searches 10+ query variations across your target roles
+# Adds results to data/scan_results.json
+# Takes ~5 minutes
+```
+
+### Naukri — `npm run scan:naukri`
+Naukri has no public API. This uses Playwright to simulate a real browser. Slow by design — adds 5–10s delays to avoid detection.
+
+```bash
+# First time only:
+npm install playwright
+npx playwright install chromium
+
+# Then:
+npm run scan:naukri
+# Takes 10–15 minutes
+# Set HEADLESS=false in scripts/naukri.mjs if getting blocked
+```
+
+> Note: Naukri's ToS prohibits scraping. Use for personal job search only, not for commercial data collection.
 
 ---
 
@@ -283,7 +318,7 @@ career-ops-india/
 
 ## Roadmap
 
-- [x] ATS scanner — Greenhouse, Lever, Ashby (196 Indian companies)
+- [x] ATS scanner — Greenhouse, Lever, Ashby (256 Indian companies)
 - [x] Job evaluation — A–F scoring, 10 dimensions, ghost job detection
 - [x] Batch evaluation mode
 - [x] Tailored PDF generation
