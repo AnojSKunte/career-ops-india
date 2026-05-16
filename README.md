@@ -26,7 +26,7 @@ Inspired by [career-ops](https://github.com/santifer/career-ops) by Santiago —
 
 | Command | What happens |
 |---|---|
-| `npm run scan` | Hits ATS APIs of 256 Indian companies. Returns matching jobs in ~30 seconds. No scraping. No login. |
+| `npm run scan` | Hits ATS APIs of 230 Indian companies. Returns matching jobs in ~30 seconds. No scraping. No login. |
 | `/evaluate [URL]` | Scores a job A–F across 10 dimensions. Flags ghost jobs, wrong level, salary gaps. |
 | `/batch [URLs]` | Evaluates up to 30 jobs at once. Ranks them. Cuts the noise. |
 | `/pdf [job]` | Rewrites your resume for a specific job — injects JD keywords, reorders bullets, stays truthful. |
@@ -175,7 +175,7 @@ npm run pdf           # Generate PDF (usually called via /pdf in AI CLI)
 
 ## Company coverage
 
-**256 Indian companies pre-configured** across 3 ATS systems:
+**230 Indian companies pre-configured** across 3 ATS systems:
 
 | ATS | Companies (sample) |
 |---|---|
@@ -188,6 +188,21 @@ npm run pdf           # Generate PDF (usually called via /pdf in AI CLI)
 ---
 
 ## Sources covered
+
+## Full source coverage
+
+| Source | Command | What it covers |
+|---|---|---|
+| Greenhouse / Lever / Ashby |  | 256 pre-mapped Indian companies |
+| LinkedIn |  | All of LinkedIn, public data, no login |
+| Instahyre |  | Quality Indian tech/startup platform |
+| Cutshort |  | Startup roles, skills-based matching |
+| Wellfound |  | Funded global startups, India filter |
+| Naukri |  | 1cr+ listings (needs Python + Scrapling) |
+
+Run all at once: 
+
+---
 
 ### ATS companies (Greenhouse / Lever / Ashby) — `npm run scan`
 The cleanest, most reliable source. Companies post jobs directly to their ATS. The scanner hits the JSON APIs — no browser, no CAPTCHA, instant results.
@@ -318,7 +333,7 @@ career-ops-india/
 
 ## Roadmap
 
-- [x] ATS scanner — Greenhouse, Lever, Ashby (256 Indian companies)
+- [x] ATS scanner — Greenhouse, Lever, Ashby (230 Indian companies)
 - [x] Job evaluation — A–F scoring, 10 dimensions, ghost job detection
 - [x] Batch evaluation mode
 - [x] Tailored PDF generation
