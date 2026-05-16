@@ -1,22 +1,41 @@
 {
   "name": "career-ops-india",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "AI-powered job search pipeline for the Indian market. Works with Claude Code and Gemini CLI.",
   "type": "module",
   "scripts": {
-    "scan":      "node scripts/scan.mjs",
-    "pdf":       "node scripts/generate-pdf.mjs",
-    "doctor":    "node scripts/doctor.mjs",
-    "liveness":  "node scripts/check-liveness.mjs",
-    "verify":    "node scripts/verify-pipeline.mjs",
-    "dedup":     "node scripts/dedup-tracker.mjs",
-    "sync-check":"node scripts/cv-sync-check.mjs",
+    "scan": "node scripts/scan.mjs",
+    "pdf": "node scripts/generate-pdf.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "liveness": "node scripts/check-liveness.mjs",
+    "verify": "node scripts/verify-pipeline.mjs",
+    "dedup": "node scripts/dedup-tracker.mjs",
+    "sync-check": "node scripts/cv-sync-check.mjs",
     "dashboard": "node scripts/open-dashboard.mjs",
-    "setup":     "node scripts/doctor.mjs && echo '\nSetup complete. Run: npm run scan'"
+    "setup": "node scripts/doctor.mjs && echo '\nSetup complete. Run: npm run scan'",
+    "scan:all": "node scripts/scan.mjs && node scripts/linkedin.mjs && node scripts/instahyre.mjs && node scripts/cutshort.mjs && node scripts/wellfound.mjs",
+    "scan:linkedin": "node scripts/linkedin.mjs",
+    "scan:naukri": "node scripts/naukri.mjs",
+    "scan:instahyre": "node scripts/instahyre.mjs",
+    "scan:cutshort": "node scripts/cutshort.mjs",
+    "scan:wellfound": "node scripts/wellfound.mjs",
+    "scan:naukri:stealth": "python scrapers/naukri_stealth.py",
+    "scan:all:full": "node scripts/scan.mjs && node scripts/linkedin.mjs && node scripts/instahyre.mjs && node scripts/cutshort.mjs && node scripts/wellfound.mjs && python scrapers/naukri_stealth.py"
   },
   "keywords": [
-    "ai", "job-search", "india", "claude-code", "gemini-cli",
-    "career", "automation", "naukri", "linkedin", "greenhouse"
+    "ai",
+    "job-search",
+    "india",
+    "claude-code",
+    "gemini-cli",
+    "career",
+    "automation",
+    "naukri",
+    "linkedin",
+    "greenhouse",
+    "fresher",
+    "campus-placement",
+    "analytics"
   ],
   "author": "Anoj S K <https://github.com/AnojSKunte>",
   "homepage": "https://github.com/AnojSKunte/career-ops-india",
@@ -27,7 +46,8 @@
   "license": "MIT",
   "dependencies": {
     "js-yaml": "^4.1.0",
-    "puppeteer": "^22.0.0"
+    "puppeteer": "^22.0.0",
+    "node-html-parser": "^6.1.0"
   },
   "engines": {
     "node": ">=18.0.0"
