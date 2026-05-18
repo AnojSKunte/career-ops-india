@@ -1,0 +1,24 @@
+# career-ops-india Python requirements
+# Install: pip install -r requirements.txt
+
+# ── Core (required for all Python scrapers) ───────────────────────────────────
+scrapegraphai>=1.13.0      # LLM-powered universal scraper (ScrapeGraphAI)
+
+# ── Naukri stealth scraper ────────────────────────────────────────────────────
+scrapling>=0.3.0            # Anti-bot scraper with Camoufox + Cloudflare bypass
+
+# ── Terminal dashboard ────────────────────────────────────────────────────────
+textual>=0.80.0             # Full TUI framework (run: python tui/dashboard.py)
+rich>=13.0.0                # Fallback simple dashboard (auto-installed with textual)
+
+# ── Email (optional — only needed for cold_email_agent.py) ───────────────────
+# smtplib is built-in Python — no install needed for Gmail sending
+
+# ── LLM providers (install whichever you use) ─────────────────────────────────
+google-generativeai>=0.8.0  # Gemini (free tier available)
+anthropic>=0.28.0           # Claude API
+# openai>=1.0.0             # OpenAI (uncomment if using GPT)
+
+# ── Playwright (required by ScrapeGraphAI and scrapling) ─────────────────────
+# After pip install, run: playwright install firefox chromium
+playwright>=1.44.0
