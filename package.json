@@ -1,6 +1,6 @@
 {
   "name": "career-ops-india",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "AI-powered job search pipeline for the Indian market. Works with Claude Code and Gemini CLI.",
   "type": "module",
   "scripts": {
@@ -20,7 +20,13 @@
     "scan:cutshort": "node scripts/cutshort.mjs",
     "scan:wellfound": "node scripts/wellfound.mjs",
     "scan:naukri:stealth": "python scrapers/naukri_stealth.py",
-    "scan:all:full": "node scripts/scan.mjs && node scripts/linkedin.mjs && node scripts/instahyre.mjs && node scripts/cutshort.mjs && node scripts/wellfound.mjs && python scrapers/naukri_stealth.py"
+    "scan:all:full": "node scripts/scan.mjs && node scripts/linkedin.mjs && node scripts/instahyre.mjs && node scripts/cutshort.mjs && node scripts/wellfound.mjs && python scrapers/naukri_stealth.py",
+    "tui": "python tui/dashboard.py",
+    "tui:simple": "python tui/dashboard.py --simple",
+    "scrape": "python scrapers/smart_job_scraper.py",
+    "cold-email": "python scrapers/cold_email_agent.py",
+    "find-contact": "python scrapers/email_finder.py",
+    "setup:python": "pip install -r requirements.txt && playwright install"
   },
   "keywords": [
     "ai",
