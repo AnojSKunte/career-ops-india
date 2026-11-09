@@ -26,7 +26,13 @@ Inspired by [career-ops](https://github.com/santifer/career-ops) by Santiago —
 
 | Command | What happens |
 |---|---|
-| `npm run scan` | Hits ATS APIs of 230 Indian companies. Returns matching jobs in ~30 seconds. No scraping. No login. |
+| `python main.py scan` | **Multi-tier scan across all sources**: ATS APIs, aggregator APIs, RSS feeds, and JobSpy. Persists to SQLite. |
+| `python main.py scan --safe` | Zero ban risk scan (Tiers 1-3 only: ATS APIs + free APIs + RSS feeds). |
+| `python main.py scan --tier 1` | Scans ATS endpoints (Greenhouse, Lever, Ashby, Workday, SmartRecruiters, BambooHR). |
+| `python main.py results` | Ranks and displays top matched jobs with scores, grades (A-F), and salary in LPA. |
+| `python main.py stats` | Shows live job counts by source, grade distributions, and pipeline conversion rates. |
+| `python main.py export` | Exports active database jobs into `data/scan_results.json` for AI prompt modes. |
+| `npm run scan` | Original Node.js scanner for Greenhouse, Lever, and Ashby APIs. |
 | `/evaluate [URL]` | Scores a job A–F across 10 dimensions. Flags ghost jobs, wrong level, salary gaps. |
 | `/batch [URLs]` | Evaluates up to 30 jobs at once. Ranks them. Cuts the noise. |
 | `/pdf [job]` | Rewrites your resume for a specific job — injects JD keywords, reorders bullets, stays truthful. |

@@ -22,3 +22,26 @@ anthropic>=0.28.0           # Claude API
 # ── Playwright (required by ScrapeGraphAI and scrapling) ─────────────────────
 # After pip install, run: playwright install firefox chromium
 playwright>=1.44.0
+
+# ── NEW DEPENDENCIES ─────────────────────────────────────────────────────────
+
+# Job Scraping - NEW
+python-jobspy>=1.1.75
+ats-scrapers>=0.1.0
+feedparser>=6.0.11
+httpx>=0.28.0
+curl-cffi>=0.7.4
+
+# Database - NEW
+sqlalchemy>=2.0.36
+alembic>=1.14.0
+
+# Intelligence - NEW
+scikit-learn>=1.6.0
+pydantic>=2.10.0
+
+# Scheduling & Alerts - NEW
+schedule>=1.2.2
+python-dotenv>=1.0.1
+pyyaml>=6.0.1
+nodriver>=0.38.0

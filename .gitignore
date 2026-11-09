@@ -25,3 +25,10 @@ Thumbs.db
 # Env
 .env
 *.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.db
+data/*.db
